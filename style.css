@@ -1,1 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #e31837; /* Red from Trinidadian flag */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+.hero, .menu, .hours, .contact {
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero {
+    background-color: #f4f4f4;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.menu li {
+    margin: 0.5rem 0;
+}
+
+.hours p {
+    margin: 0.3rem 0;
+}
+
+.contact {
+    background-color: #008000; /* Green for a vibrant touch */
+    color: white;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #ff0; /* Yellow accent */
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .hero, .menu, .hours, .contact {
+        padding: 1rem;
+    }
+}
