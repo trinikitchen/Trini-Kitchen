@@ -6,85 +6,124 @@
 
 body {
     font-family: 'Lora', serif;
-    line-height: 1.6;
+    line-height: 1.8;
     color: #333;
-    background-color: #FFF8E7; /* Creamy background */
+    background-color: #F4E1A8; /* Sandy beach tone */
 }
 
 /* Header */
 header {
-    background: linear-gradient(to bottom, #a11220, #d32f2f); /* Deep red gradient */
+    background: linear-gradient(to bottom, #a11220, #d32f2f); /* Trinidad red gradient */
     color: white;
     text-align: center;
-    padding: 2rem 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 3rem 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 10%, transparent 10%);
+    background-size: 50px 50px;
+    opacity: 0.3;
 }
 
 .logo-placeholder {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 header h1 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.5rem;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
     margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-style: italic;
+}
+
+/* Steel Pan Motif */
+.steelpan-motif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-radial-gradient(circle, #FFD700 0, #FFD700 5px, transparent 5px, transparent 20px);
+    opacity: 0.2;
+    animation: pulse 3s infinite ease-in-out;
 }
 
 /* Sections */
 .hero, .menu, .hours, .contact {
-    padding: 3rem 1rem;
+    padding: 4rem 1rem;
     text-align: center;
-    margin: 1rem auto;
-    max-width: 800px;
+    margin: 2rem auto;
+    max-width: 900px;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
 }
 
 .hero {
-    background-color: #f9e8c9; /* Light gold */
+    background: linear-gradient(to bottom, #1E90FF, #F4E1A8); /* Maracas Beach gradient: ocean to sand */
 }
 
 h2 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.2rem;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
     color: #a11220;
     position: relative;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 /* Decorative elements around headings */
 h2::before, h2::after {
-    content: "✦";
+    content: "✻";
     color: #FFD700; /* Gold */
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
 
 h2::before {
-    left: -30px;
+    left: -40px;
 }
 
 h2::after {
-    right: -30px;
+    right: -40px;
 }
 
 .menu ul {
     list-style: none;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
 }
 
 .menu li {
-    margin: 0.8rem 0;
-    font-size: 1.1rem;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+.menu li::before {
+    content: "🍴";
+    position: absolute;
+    left: 0;
+    color: #a11220;
 }
 
 .menu li strong {
@@ -93,31 +132,62 @@ h2::after {
 
 .hours p {
     margin: 0.5rem 0;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .contact {
-    background-color: #008000; /* Green */
+    background: linear-gradient(to bottom, #008000, #006400); /* Rich green gradient */
     color: white;
 }
 
 .cta-button {
     display: inline-block;
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 2rem;
     background-color: #FFD700; /* Gold */
     color: #333;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 1rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    font-weight: bold;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button:hover {
-    transform: scale(1.05);
+    transform: translateY(-3px);
     background-color: #ffeb3b;
 }
 
-/* Fade-in animation */
+/* Wave Divider for Maracas Beach */
+.wave-divider {
+    position: relative;
+    height: 50px;
+    background: linear-gradient(to bottom, #1E90FF 50%, transparent 50%);
+    overflow: hidden;
+}
+
+.wave-divider::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.29,158,28,70.36-5.37,136.33-24.29,206.8-25.43,67.87-1.1,132.56,12.72,200,14.29,69.62,1.62,139.24-11.43,208-14.29,66.67-2.76,133.33,5.71,200,14.29s133.33,17.14,200,14.29c66.67-2.86,132.33-11.43,200-14.29S1066.67,46.29,1133.33,48c66.67,1.71,133.33-5.71,200-14.29V0H0Z" fill="%23F4E1A8"/></svg>') repeat-x bottom;
+    background-size: 1200px 120px;
+    animation: wave 10s linear infinite;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { opacity: 0.2; }
+    50% { opacity: 0.4; }
+    100% { opacity: 0.2; }
+}
+
+@keyframes wave {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-1200px); }
+}
+
 .fade-in {
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
@@ -135,36 +205,40 @@ h2::after {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #000000; /* Black from Trinidadian flag */
     color: white;
     text-align: center;
-    padding: 1.5rem;
-    font-size: 0.9rem;
-    margin-top: 2rem;
+    padding: 2rem;
+    font-size: 1rem;
+    margin-top: 3rem;
 }
 
 /* Mobile responsiveness */
 @media (max-width: 600px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     header p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     h2::before, h2::after {
-        font-size: 1.2rem;
-        left: -20px;
-        right: -20px;
+        font-size: 1.5rem;
+        left: -25px;
+        right: -25px;
     }
 
     .hero, .menu, .hours, .contact {
-        padding: 1.5rem;
-        margin: 0.5rem;
+        padding: 2rem 1rem;
+        margin: 1rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem;
     }
 }
