@@ -8,12 +8,12 @@ body {
     font-family: 'Lora', serif;
     line-height: 1.8;
     color: #333;
-    background-color: #F4E1A8; /* Sandy beach tone */
+    background-color: #FFFFFF; /* White background */
 }
 
 /* Header */
 header {
-    background: linear-gradient(to bottom, #a11220, #d32f2f); /* Trinidad red gradient */
+    background: linear-gradient(to bottom, #a11220, #d32f2f); /* Red gradient */
     color: white;
     text-align: center;
     padding: 3rem 1rem;
@@ -29,14 +29,17 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 10%, transparent 10%);
+    background: radial-gradient(circle, rgba(255, 69, 0, 0.2) 10%, transparent 10%); /* Orange flame accent */
     background-size: 50px 50px;
     opacity: 0.3;
 }
 
-.logo-placeholder {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.logo {
+    max-width: 250px; /* Adjusted for better fit */
+    margin-bottom: 1.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 header h1 {
@@ -58,7 +61,7 @@ header p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: repeating-radial-gradient(circle, #FFD700 0, #FFD700 5px, transparent 5px, transparent 20px);
+    background: repeating-radial-gradient(circle, #FF4500 0, #FF4500 5px, transparent 5px, transparent 20px); /* Orange for flames */
     opacity: 0.2;
     animation: pulse 3s infinite ease-in-out;
 }
@@ -74,10 +77,11 @@ header p {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     position: relative;
     overflow: hidden;
+    border: 2px solid #a11220; /* Red border */
 }
 
 .hero {
-    background: linear-gradient(to bottom, #1E90FF, #F4E1A8); /* Maracas Beach gradient: ocean to sand */
+    background: linear-gradient(to bottom, #000000, #FFFFFF); /* Black to white for contrast */
 }
 
 h2 {
@@ -92,7 +96,7 @@ h2 {
 /* Decorative elements around headings */
 h2::before, h2::after {
     content: "✻";
-    color: #FFD700; /* Gold */
+    color: #FF4500; /* Orange flame accent */
     font-size: 1.8rem;
     position: absolute;
     top: 50%;
@@ -120,10 +124,10 @@ h2::after {
 }
 
 .menu li::before {
-    content: "🍴";
+    content: "🔥"; /* Flame emoji for orange accent */
     position: absolute;
     left: 0;
-    color: #a11220;
+    color: #FF4500;
 }
 
 .menu li strong {
@@ -136,15 +140,15 @@ h2::after {
 }
 
 .contact {
-    background: linear-gradient(to bottom, #008000, #006400); /* Rich green gradient */
+    background: linear-gradient(to bottom, #a11220, #d32f2f); /* Red gradient */
     color: white;
 }
 
 .cta-button {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: #FFD700; /* Gold */
-    color: #333;
+    background-color: #FF4500; /* Orange flame color */
+    color: #FFFFFF;
     text-decoration: none;
     border-radius: 8px;
     margin-top: 1.5rem;
@@ -155,14 +159,14 @@ h2::after {
 
 .cta-button:hover {
     transform: translateY(-3px);
-    background-color: #ffeb3b;
+    background-color: #FF6347; /* Slightly lighter orange */
 }
 
 /* Wave Divider for Maracas Beach */
 .wave-divider {
     position: relative;
     height: 50px;
-    background: linear-gradient(to bottom, #1E90FF 50%, transparent 50%);
+    background: linear-gradient(to bottom, #000000 50%, transparent 50%); /* Black waves */
     overflow: hidden;
 }
 
@@ -171,7 +175,7 @@ h2::after {
     position: absolute;
     width: 200%;
     height: 100%;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.29,158,28,70.36-5.37,136.33-24.29,206.8-25.43,67.87-1.1,132.56,12.72,200,14.29,69.62,1.62,139.24-11.43,208-14.29,66.67-2.76,133.33,5.71,200,14.29s133.33,17.14,200,14.29c66.67-2.86,132.33-11.43,200-14.29S1066.67,46.29,1133.33,48c66.67,1.71,133.33-5.71,200-14.29V0H0Z" fill="%23F4E1A8"/></svg>') repeat-x bottom;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.29,158,28,70.36-5.37,136.33-24.29,206.8-25.43,67.87-1.1,132.56,12.72,200,14.29,69.62,1.62,139.24-11.43,208-14.29,66.67-2.76,133.33,5.71,200,14.29s133.33,17.14,200,14.29c66.67-2.86,132.33-11.43,200-14.29S1066.67,46.29,1133.33,48c66.67,1.71,133.33-5.71,200-14.29V0H0Z" fill="%23FFFFFF"/></svg>') repeat-x bottom;
     background-size: 1200px 120px;
     animation: wave 10s linear infinite;
 }
@@ -205,7 +209,7 @@ h2::after {
 
 /* Footer */
 footer {
-    background-color: #000000; /* Black from Trinidadian flag */
+    background-color: #000000; /* Black */
     color: white;
     text-align: center;
     padding: 2rem;
@@ -221,6 +225,10 @@ footer {
 
     header p {
         font-size: 1.1rem;
+    }
+
+    .logo {
+        max-width: 180px; /* Slightly smaller for mobile */
     }
 
     h2 {
